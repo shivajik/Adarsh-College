@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "OoZ-H4EMg0RjpVeIz2L6l"
+uri = "file://artifacts/adarsh-college/public/images/hero-campus.png"
+type = "image"
+title = "College campus hero"
+
+[[generated]]
+id = "ugvNk9RX1jMCHnOlNk_J5"
+uri = "file://artifacts/adarsh-college/public/images/science-lab.png"
+type = "image"
+title = "Science lab students"
+
+[[generated]]
+id = "Mo6eDtS4sTX_HMHN-7uZP"
+uri = "file://artifacts/adarsh-college/public/images/abstract-edu.png"
+type = "image"
+title = "Abstract educational background"

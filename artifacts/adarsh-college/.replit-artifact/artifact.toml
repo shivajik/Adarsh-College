@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Adarsh Junior College"
+version = "1.0.0"
+id = "artifacts/adarsh-college"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25586
+
+[services.development]
+run = "pnpm --filter @workspace/adarsh-college run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/adarsh-college", "run", "build" ]
+publicDir = "artifacts/adarsh-college/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25586"
+BASE_PATH = "/"
