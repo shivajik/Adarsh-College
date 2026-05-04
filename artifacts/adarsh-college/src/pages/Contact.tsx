@@ -85,12 +85,19 @@ export default function Contact() {
                           <MapPin className="w-6 h-6" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-foreground mb-1">Campus Address</h4>
+                          <h4 className="font-bold text-foreground mb-1">College Address</h4>
                           <p className="text-muted-foreground leading-relaxed">
                             Adarsh Junior College<br/>
                             Gaikwad Jalgaon, Tq. Shevgaon,<br/>
                             Dist. Ahmednagar 414504,<br/>
                             Maharashtra, India
+                          </p>
+                          <p className="text-xs text-muted-foreground mt-2">College Index: J.12.12.026 · U-DISE: 27261103907</p>
+                          <h4 className="font-bold text-foreground mt-5 mb-1">Trust Address (OSSPM)</h4>
+                          <p className="text-muted-foreground leading-relaxed">
+                            Plot No. 43, Gut No. 91 Part, Samrat Nagar,<br/>
+                            Behind Bembde Hospital, By Pass Satara Area,<br/>
+                            Aurangabad 431001, Maharashtra
                           </p>
                         </div>
                       </div>
@@ -114,6 +121,12 @@ export default function Contact() {
                           <h4 className="font-bold text-foreground mb-1">Email</h4>
                           <p className="text-muted-foreground">info@adarshjcollege.com</p>
                           <p className="text-muted-foreground">principal@adarshjcollege.com</p>
+                          <p className="text-muted-foreground">collegeadarsh2016@gmail.com</p>
+                          <h4 className="font-bold text-foreground mt-4 mb-1">Department Emails</h4>
+                          <p className="text-muted-foreground text-sm">physics@adarshjcollege.com</p>
+                          <p className="text-muted-foreground text-sm">chemistry@adarshjcollege.com</p>
+                          <p className="text-muted-foreground text-sm">biology@adarshjcollege.com</p>
+                          <p className="text-muted-foreground text-sm">maths@adarshjcollege.com</p>
                         </div>
                       </div>
                     </div>

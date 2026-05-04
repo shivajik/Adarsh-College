@@ -1,6 +1,24 @@
 import { motion } from "framer-motion";
-import { User, Quote } from "lucide-react";
+import { User, Quote, Building2, GraduationCap, School } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+const MARATHI_SCHOOLS = [
+  "Late. Vimalbai G. Gaikwad Secondary School, Gaikwad Jalgaon, Tq. Shevgaon, Dist. Ahmednagar",
+  "Late. Kishanrao Dhanve Secondary School, Bharadi, Tq. Ambad, Dist. Jalna",
+  "Secondary School, Rui Tq. Ambad, Dist. Jalna",
+  "Shree Shaneshwar Secondary School, Limbe Jalgaon, Tq. Gangapur, Dist. Aurangabad",
+  "Om Madhyamik Vidyalay, Sahakar Nagar, Aurangabad",
+  "Om Balak Mandir, Sahakar Nagar, Aurangabad",
+];
+const ENGLISH_SCHOOLS = [
+  "Late. Gangadhar Patil English School, Gaikwad Jalgaon, Tq. Shevgaon, Dist. Ahmednagar",
+  "Sai English School, Rui Tq. Ambad, Dist. Jalna",
+];
+const COLLEGES = [
+  "Late. Vimalbai G. Gaikwad Secondary & Higher Secondary School, Gaikwad Jalgaon",
+  "Adarsh Junior College, Gaikwad Jalgaon, Tq. Shevgaon, Dist. Ahmednagar",
+  "Shree Shaneshwar Higher Secondary School, Limbe Jalgaon, Tq. Gangapur, Dist. Aurangabad",
+];
 
 const COMMITTEE = [
   { role: "President", name: "Mr. Ashokraoji Gangadhar Gaikwad", qual: "B.Sc, D.L.L.&W., L.L.B., M.B.A." },
@@ -113,6 +131,70 @@ export default function About() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust history */}
+      <section className="py-20 bg-white border-t border-border">
+        <div className="max-w-5xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-10">
+            <Building2 className="w-12 h-12 mx-auto text-primary mb-4" />
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">About the Trust</h2>
+            <p className="text-secondary font-semibold">OM SHIVKRUPA SHIKSHAN PRASARAK MANDAL, AURANGABAD (OSSPM)</p>
+          </div>
+          <div className="prose prose-slate max-w-none text-muted-foreground space-y-4">
+            <p>
+              OSSPM is a Non-governing Organization registered under the Maharashtra Society Registration Act 21 of 1860 (Reg. No. Maha/54/1996 dt. 1/02/1996) and the Mumbai Public Trust Act 29 of 1950 (Reg. No. F-3437 (AUR) dt. 2/08/1996). The jurisdiction of the NGO covers the entire state of Maharashtra.
+            </p>
+            <p>
+              The organization was established to provide educational facilities to rural areas, empower marginalized sections, and improve the socio-economic status of women, the poor and SC/ST communities. The trust also drives change in health, education, and the environment.
+            </p>
+            <p>
+              Service efforts focus on the growth and development of weaker sections — SC/ST women and children, bonded labour and the economically backward — through awareness campaigns, micro-credit and welfare activities. The society works to remove untouchability through scientific community interaction, where the organization acts as a facilitator helping communities mobilize their natural and human resources for self-help.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Affiliated institutions */}
+      <section className="py-20 bg-background border-t border-border">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">Institutions Run by OSSPM</h2>
+            <p className="text-muted-foreground">A network of schools and colleges across Maharashtra.</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2"><School className="w-5 h-5 text-primary" /> Marathi Medium Schools</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ol className="list-decimal pl-5 text-sm text-muted-foreground space-y-2">
+                  {MARATHI_SCHOOLS.map((s) => <li key={s}>{s}</li>)}
+                </ol>
+              </CardContent>
+            </Card>
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2"><School className="w-5 h-5 text-primary" /> English Medium Schools</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ol className="list-decimal pl-5 text-sm text-muted-foreground space-y-2">
+                  {ENGLISH_SCHOOLS.map((s) => <li key={s}>{s}</li>)}
+                </ol>
+              </CardContent>
+            </Card>
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2"><GraduationCap className="w-5 h-5 text-primary" /> Higher Secondary &amp; Junior Colleges</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ol className="list-decimal pl-5 text-sm text-muted-foreground space-y-2">
+                  {COLLEGES.map((s) => <li key={s}>{s}</li>)}
+                </ol>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
