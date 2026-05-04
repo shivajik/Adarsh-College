@@ -4,13 +4,7 @@
   "installCommand": "pnpm install --no-frozen-lockfile",
   "outputDirectory": "artifacts/adarsh-college/dist/public",
   "framework": null,
-  "build": {
-    "env": {
-      "PORT": "25586",
-      "BASE_PATH": "/"
-    }
-  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
   ]
 }
