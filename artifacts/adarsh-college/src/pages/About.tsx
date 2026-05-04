@@ -21,13 +21,13 @@ const COLLEGES = [
 ];
 
 const COMMITTEE = [
-  { role: "President", name: "Mr. Ashokraoji Gangadhar Gaikwad", qual: "B.Sc, D.L.L.&W., L.L.B., M.B.A." },
-  { role: "Vice President", name: "Mr. Nitinrao K. Naiknaware", qual: "M.Sc, B.Ed." },
-  { role: "Secretary", name: "Prof. Nandkishore Gangadhar Gaikwad", qual: "M.Sc, M.Ed." },
-  { role: "Treasurer", name: "Mrs. Alka N. Gaikwad", qual: "M.A, B.P.Ed." },
-  { role: "Member", name: "Mrs. Mrunalini A. Gaikwad", qual: "M.A." },
-  { role: "Member", name: "Mrs. Sangita R. Gaikwad", qual: "M.A." },
-  { role: "Member", name: "Mr. Shivajirao T. Dhage", qual: "" },
+  { role: "President", name: "Mr. Ashokraoji Gangadhar Gaikwad", qual: "B.Sc, D.L.L.&W., L.L.B., M.B.A.", photo: "https://vgghss.com/wp-content/uploads/2020/10/A_G_Gaikwad.jpg" },
+  { role: "Vice President", name: "Mr. Nitinrao K. Naiknaware", qual: "M.Sc, B.Ed.", photo: "" },
+  { role: "Secretary", name: "Prof. Nandkishore Gangadhar Gaikwad", qual: "M.Sc, M.Ed.", photo: "https://vgghss.com/wp-content/uploads/2020/10/N_G_Gaikwad_Sir.jpg" },
+  { role: "Treasurer", name: "Mrs. Alka N. Gaikwad", qual: "M.A, B.P.Ed.", photo: "" },
+  { role: "Member", name: "Mrs. Mrunalini A. Gaikwad", qual: "M.A.", photo: "" },
+  { role: "Member", name: "Mrs. Sangita R. Gaikwad", qual: "M.A.", photo: "" },
+  { role: "Member", name: "Mr. Shivajirao T. Dhage", qual: "", photo: "" },
 ];
 
 export default function About() {
@@ -62,10 +62,12 @@ export default function About() {
             >
               <div className="sticky top-32">
                 <div className="aspect-[4/5] bg-muted rounded-2xl overflow-hidden mb-6 relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/30">
-                    <User className="w-32 h-32" />
-                  </div>
-                  {/* Placeholder for actual principal photo if provided later */}
+                  <img
+                    src="https://vgghss.com/wp-content/uploads/2020/10/abt.jpg"
+                    alt="Principal of Adarsh Junior College"
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="text-2xl font-serif font-bold text-foreground">Principal's Desk</h3>
                 <p className="text-muted-foreground">Adarsh Junior College</p>
@@ -120,7 +122,12 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <Card className="h-full border-border hover:border-primary/30 transition-colors shadow-sm">
+                <Card className="h-full border-border hover:border-primary/30 transition-colors shadow-sm overflow-hidden">
+                  {member.photo && (
+                    <div className="aspect-[4/3] bg-muted overflow-hidden">
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" loading="lazy" />
+                    </div>
+                  )}
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm text-secondary font-bold uppercase tracking-wider">{member.role}</CardTitle>
                   </CardHeader>

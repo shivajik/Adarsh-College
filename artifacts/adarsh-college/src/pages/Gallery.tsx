@@ -13,6 +13,15 @@ const IMAGES = [
   "https://adarshjcollege.com/wp-content/uploads/2022/11/Vgg1-9.jpeg",
   "https://adarshjcollege.com/wp-content/uploads/2022/11/Vgg1-10.jpeg",
   "https://adarshjcollege.com/wp-content/uploads/2022/11/Vgg1-1.jpeg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/om_shivkrupa-16.jpeg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/om_shivkrupa-20.jpeg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/om_shivkrupa-22.jpeg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/om_shivkrupa-24.jpeg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/om_shivkrupa-7.jpeg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/om_shivkrupa-25.jpeg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/11.jpg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/22.jpg",
+  "https://adarshjcollege.com/wp-content/uploads/2020/10/33.jpeg",
 ];
 
 export default function Gallery() {
