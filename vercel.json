@@ -3,10 +3,9 @@
   "buildCommand": "pnpm --filter @workspace/adarsh-college run build",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "outputDirectory": "dist/public",
-  "framework": null,
+  "framework": "vite",
   "routes": [
-    { "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
