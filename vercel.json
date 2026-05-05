@@ -1,6 +1,8 @@
 {
-  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/adarsh-college run build-vercel && rm -rf dist && cp -r artifacts/adarsh-college/dist dist",
+  "installCommand": "npx -y pnpm@9 install --no-frozen-lockfile",
+  "buildCommand": "npx -y pnpm@9 --filter @workspace/adarsh-college run build-vercel && node ./scripts/vercel-copy-dist.mjs",
   "outputDirectory": "dist",
+  "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
