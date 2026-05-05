@@ -2,7 +2,8 @@
   "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/adarsh-college run build",
   "outputDirectory": "dist",
   "framework": null,
-  "rewrites": [
-    { "source": "/:path*", "destination": "/index.html" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
