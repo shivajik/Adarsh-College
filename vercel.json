@@ -4,7 +4,9 @@
   "installCommand": "pnpm install --no-frozen-lockfile",
   "outputDirectory": "dist/public",
   "framework": null,
-  "rewrites": [
-    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+  "routes": [
+    { "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
