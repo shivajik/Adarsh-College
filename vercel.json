@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/adarsh-college run build-vercel && (test -d artifacts/adarsh-college/dist && (rm -rf dist && cp -r artifacts/adarsh-college/dist dist)) || true && ls -la dist",
-  "outputDirectory": "dist",
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/adarsh-college run build-vercel",
+  "outputDirectory": "artifacts/adarsh-college/dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
