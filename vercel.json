@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/adarsh-college run build",
-  "outputDirectory": "dist",
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/adarsh-college run build-vercel",
+  "outputDirectory": "artifacts/adarsh-college/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
