@@ -1,7 +1,9 @@
 {
   "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/adarsh-college run build-vercel",
   "outputDirectory": "artifacts/adarsh-college/dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!assets/|favicon\\.svg|.*\\.[a-zA-Z0-9]+$).*)", "destination": "/index.html" }
   ]
 }
