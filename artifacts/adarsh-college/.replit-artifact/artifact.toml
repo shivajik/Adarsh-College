@@ -15,11 +15,11 @@ paths = [ "/" ]
 localPort = 25586
 
 [services.development]
-run = "pnpm --filter @workspace/adarsh-college run dev"
+run = "corepack pnpm --filter @workspace/adarsh-college run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/adarsh-college", "run", "build" ]
-publicDir = "artifacts/adarsh-college/dist/public"
+build = [ "corepack", "pnpm", "--filter", "@workspace/adarsh-college", "run", "build" ]
+publicDir = "artifacts/adarsh-college/dist"
 serve = "static"
 
 [[services.production.rewrites]]
