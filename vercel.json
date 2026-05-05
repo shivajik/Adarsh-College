@@ -2,10 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "pnpm --filter @workspace/adarsh-college run build",
   "installCommand": "pnpm install --no-frozen-lockfile",
-  "outputDirectory": "dist/public",
-  "framework": "vite",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+  "outputDirectory": "artifacts/adarsh-college/dist/public",
+  "framework": null,
+  "rewrites": [
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
   ]
 }
